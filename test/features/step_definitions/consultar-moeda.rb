@@ -1,10 +1,10 @@
 #COMUM
-Dado("que eu possua uma lista de id de moedas") do
+Dado("que eu informe o id {string}") do |idmoeda|
+    @idMoeda = idmoeda
     @consultarmoeda = ConsultarMoeda.new
 end
 
-Quando("eu informar o id valido {string}") do |idmoeda|
-    @idMoeda = idmoeda
+Quando("eu consultar o id") do
     @resposta = @consultarmoeda.consultar(@idMoeda)
 end
 
